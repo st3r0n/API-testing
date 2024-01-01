@@ -1,3 +1,28 @@
 this type of vulnerability includes assigning value to extra set of variables or paramaeters in an application
 eg suppose we can update our name and email but we have identified the application usued id parameter for identficationof users
 then if we can include in a POST ir PATCH request and we can modify the response then it is known as mass assigmnet vulns
+
+
++++++++++++++++++++++++MASS ASSIGMNET VULNS IN API++++++++++++++++++++++++++++++++++
+STEP1 identify the hidden parameters 
+eg suppose a POST REQUEST TO UPDATE SOMETHING LOOK like this:
+{
+    "username": "wiener",
+    "email": "wiener@example.com",
+}
+AND a GET /apr/user/123 may look like :
+{
+    "id": 123,                 -------------------> hidden responses
+    "name": "John Doe",
+    "email": "john@example.com",
+    "isAdmin": "false"       --------------------> hidden responses
+}
+so we have identfied hidden responces now we can try to modify them
+
+STEP2 first TRY to send PATCH or POST REQUEST
+{
+    "username": "wiener",
+    "email": "wiener@example.com",
+    "isAdmin": false,            -------> try to change this value to true or any arbitrary value
+}
+it setting true gives 200 ok or successful response or arbitrary value give If the application behaves differently we can confirm we can modify the value
