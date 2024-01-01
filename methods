@@ -1,1 +1,22 @@
++++++++++++API RECON+++++++++++++++
+for api testing fisrts tep is to gather as much as information we can in order to interact and exploit the api
+look for api request like GET /api/ or POST /api in initial recon
+after recon we need to find how to interact with 
+this may include 1 using appropirate methods like GET POST PATCH OPTIONS etc
+2 content type like application/sjson or www-x-url-encoded or other type
+3 rate limits and auth mechanisms
+
+WE CAN LOOK AT API DOCUMENTATIONS IF WE FIND WHAT API IS BEING USED   ----> for this we can either use openapi parser(Bapp) if server is using openapi
+or we can find the documentation in following ways:
+look for patterns similar to: 
+    /api
+    /swagger/index.html
+    /openapi.json
+
+and if you found any documenatation like above try to go backward one step at a time like (we found api request as /api/swagger/v1/users/123 )
+
+    /api/swagger/v1
+    /api/swagger
+    /api
+this can also gives us documenattaions
 
