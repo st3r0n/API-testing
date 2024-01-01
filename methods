@@ -29,4 +29,9 @@ To change the content type, modify the Content-Type header, then reformat the re
 You can use the Content type converter BApp to automatically convert data submitted within requests between XML and JSON. 
 
 
+FUZZ FOR ENDPOINTS  --while fuzzing make sure to include thos words that could be relevant to the app
+there could sometimes be parameter athat could be used for api try to also look for them (USE BAPP PARAM MINER)
+
+
+
 
