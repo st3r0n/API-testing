@@ -1,0 +1,3 @@
+this type of vulnerability includes assigning value to extra set of variables or paramaeters in an application
+eg suppose we can update our name and email but we have identified the application usued id parameter for identficationof users
+then if we can include in a POST ir PATCH request and we can modify the response then it is known as mass assigmnet vulns
